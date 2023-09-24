@@ -1,0 +1,106 @@
+{
+  "result": [
+    {
+      "id": 1,
+      "name": "Mouse pad",
+      "position": "p-0 pt-5 pl-3 justify-center",
+      "types": [
+        {
+          "typeName": "Black",
+          "isNew": false,          
+          "picture": {
+            "large": "https://media.discordapp.net/attachments/1116888339967119460/1151727594270638170/azulfrente.png?width=676&height=676",
+            "medium": "https://pwnage.com/cdn/shop/files/card_precision_pad_black_001.png?v=1675901835&width=150"
+          }
+        },
+        {
+          "typeName": "Cyan",
+          "isNew": false,
+          "picture": {
+            "large": "https://media.discordapp.net/attachments/1116888339967119460/1151727595147251742/azulrotao.png?width=676&height=676",
+            "medium": "https://pwnage.com/cdn/shop/files/card_precision_pad_mint_001.png?v=1675901836&width=150"
+          }
+        },
+        {
+          "typeName": "Red",
+          "isNew": true,
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_precision_pad_red_001.png?v=1675901832&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_precision_pad_red_001.png?v=1675901832&width=150"
+          }
+        },
+        {
+          "typeName": "Pink",
+          "isNew": false,
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_precision_pad_pink_001.png?v=1675901830&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_precision_pad_pink_001.png?v=1675901830&width=150"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "position": "p-0 justify-center",
+      "types": [
+        {
+          "typeName": "Ergo",
+          "isNew": false,
+          "picture": {
+            "large": "https://media.discordapp.net/attachments/1116888339967119460/1151727594270638170/azulfrente.png?width=676&height=676",
+            "medium": "https://pwnage.com/cdn/shop/files/card_stormbreaker_05_001.png?v=1675901380&width=350"
+          }
+        },
+        {
+          "typeName": "Ambi",
+          "isNew": false,
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_ergo_bh_001.png?v=1675901213&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_ergo_bh_001.png?v=1675901213&width=350"
+          }
+        },
+        {
+          "typeName": "StormBreaker",
+          "isNew": false,
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_ambi_bh_001.png?v=1675901289&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_ambi_bh_001.png?v=1675901289&width=350"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Mouse",
+      "position": "p-0 justify-center",
+      "types": [
+        {
+          "typeName": "Ambi",
+          "isNew": true,
+          "picture": {
+            "large": "https://media.discordapp.net/attachments/1116888339967119460/1151727594270638170/azulfrente.png?width=676&height=676",
+            "medium": "https://pwnage.com/cdn/shop/files/card_ergo_bh_001.png?v=1675901213&width=350"
+          }
+        },
+        {
+          "typeName": "Ergo",
+          "isNew": false,
+
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_stormbreaker_05_001.png?v=1675901380&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_stormbreaker_05_001.png?v=1675901380&width=350"
+          }
+        },
+        {
+          "typeName": "StormBreaker",
+          "isNew": false,
+          "picture": {
+            "large": "https://pwnage.com/cdn/shop/files/card_ambi_bh_001.png?v=1675901289&width=350",
+            "medium": "https://pwnage.com/cdn/shop/files/card_ambi_bh_001.png?v=1675901289&width=350"
+          }
+        }
+      ]
+    }
+  ]
+}
