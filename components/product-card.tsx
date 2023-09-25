@@ -2,6 +2,7 @@ import React from "react";
 import { CardHeader, Card, Image, CardFooter } from "@nextui-org/react";
 import { type Product } from "@/pages/types.d";
 import ButtonCheckout from "@/components/buttonCheckout";
+import ProductModal from "@/components/product-modal";
 
 export default function ProductCard({ data }: { data: Product }) {
   return (
@@ -41,7 +42,8 @@ export default function ProductCard({ data }: { data: Product }) {
           />
           <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
             <p className="text-tiny text-black/80">{data.name}</p>
-            <ButtonCheckout priceId={data.default_price.id}></ButtonCheckout>
+            {/* <ButtonCheckout priceId={data.default_price.id}/> */}
+            <ProductModal priceId={data.default_price.id} data={data}/>
           </CardFooter>
         </Card>
       </div>

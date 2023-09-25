@@ -28,19 +28,26 @@ export default function Page({ product }: { product: Product }) {
   return (
     <section className="flex justify-center items-center h-screen">
       {/* <ProductCard key={product.id} product={product} /> */}
-      <div className="max-w-[38rem] p-3 rounded-lg w-full">
-        <Image
-          removeWrapper
-          alt={product.name}
-          src={product.images[0]}
-          className="z-0 w-full object-cover"
-        />        
-      </div>
-      <article>
-          <h3 className="font-bold text-1xl md:text-2xl lg:text-3xl text-slate-50 text-center">{product.name}</h3>
-          <p>${product.default_price.unit_amount/100}</p>
-          <ButtonCheckout priceId={product.default_price.id}/>
+      <div className="flex p-4 bg-zinc-900 rounded-lg">
+        <div className="max-w-[38rem] p-3 rounded-lg w-full">
+          <Image
+            removeWrapper
+            alt={product.name}
+            src={product.images[0]}
+            className="z-0 w-full object-cover"
+          />
+        </div>
+        <article>
+          <h3 className="font-bold text-1xl md:text-2xl lg:text-3xl text-slate-50 text-center">
+            {product.name}
+            <p className="text-xl text-slate-300/90">
+            ${product.default_price.unit_amount / 100}
+          </p>
+          </h3>
+          
+          <ButtonCheckout priceId={product.default_price.id} />
         </article>
+      </div>
     </section>
   );
 }
