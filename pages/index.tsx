@@ -1,7 +1,13 @@
 import DefaultLayout from "@/layouts/default";
 import ProductCatalog from "@/components/product-catalog";
-import { loadFullData, loadProduct } from "@/pages/api/loadProduct/route";
+import { loadFullData } from "@/pages/api/loadProduct/route";
 import { type Product } from "@/pages/types.d";
+
+export async function getStaticProps() {
+  const posts = await loadFullData();
+  return { props: { posts } };
+}
+
 export default function IndexPage({ posts }: { posts: Array<Product> }) {
   return (
     <DefaultLayout>
@@ -10,8 +16,4 @@ export default function IndexPage({ posts }: { posts: Array<Product> }) {
       </section>
     </DefaultLayout>
   );
-}
-export async function getStaticProps() {
-  const posts = await loadFullData();
-  return { props: { posts } };
 }
