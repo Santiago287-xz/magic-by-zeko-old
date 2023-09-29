@@ -38,5 +38,8 @@ export interface DefaultPrice {
 export interface DefaultPriceMetadata {}
 
 export interface PostMetadata {
-  product_tipe: string
+  product_tipe: string;
+  image_1: string;
+  image_2: string;
+  image_3: string;
 }

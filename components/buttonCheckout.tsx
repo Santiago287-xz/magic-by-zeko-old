@@ -18,12 +18,12 @@ function ButtonCheckout({ priceId }: { priceId: string }) {
         });
         setUrl(await res.json());
       } catch {
-        console.log('error')
-        setError(true);
+        console.error('error')
+        // setError(true);
       }
     };
     request();
-  }, []);
+  }, [error]);
   return (
     <Button
       as={Link}

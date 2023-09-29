@@ -38,6 +38,12 @@ export default function Page({ product }: { product: Product }) {
               src={product.images[0]}
               className="z-0 object-cover w-auto"
             />
+            {/* <Image
+              removeWrapper
+              alt={product.name}
+              src={product.metadata.image_1}
+              className="z-0 object-cover w-auto"
+            /> */}
           </div>
           <article>
             <h3 className="font-bold text-1xl md:text-2xl lg:text-3xl text-foreground text-center">
@@ -50,20 +56,6 @@ export default function Page({ product }: { product: Product }) {
           </article>
         </div>
       </section>
-      <div className="relative rounded-[10px] bg-white w-full flex flex-col items-start justify-start pt-2.5 px-2.5 pb-[15px] box-border gap-[8px] text-left text-xs text-black font-inter">
-        <div className="relative rounded-[5px] bg-gainsboro w-[146px] h-[99px]" />
-        <div className="w-[146px] flex flex-col items-start justify-start gap-[5px]">
-          <div className="self-stretch relative tracking-[-0.04em] font-medium font-dm-sans flex items-center h-[15px] shrink-0">
-            Sofa SWLJK
-          </div>
-          <div className="self-stretch relative text-[8px] tracking-[-0.01em] leading-[10px] text-darkgray">
-            3-seat sofa with chaise longue, Gunnared beige
-          </div>
-          <b className="relative tracking-[-0.01em] flex text-darksalmon items-center w-[83px] h-[18px] shrink-0">
-            EGP 19,898
-          </b>
-        </div>
-      </div>
     </>
   );
 }
