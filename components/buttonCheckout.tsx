@@ -28,9 +28,10 @@ function ButtonCheckout({ priceId }: { priceId: string }) {
     <Button
       as={Link}
       href={url}
-      color={error ? "danger" : "default"}
+      color={error ? "danger" : "primary"}
       variant={error ? "shadow": "solid"}
       isDisabled={error}
+      className="h-12 w-32 text-lg"
     >
       Checkout
     </Button>

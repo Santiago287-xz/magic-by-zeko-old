@@ -3,8 +3,8 @@ import { ArrowDown } from "@/components/icons"
 
 export default function PresentationVideo() {
   return (
-    <section className="h-[91vh] bg-black">
-      <div className="flex flex-wrap flex-col h-[90%] content-center justify-center">
+    <section className="h-screen bg-black top-[-4rem] relative">
+      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center">
         <small className="uppercase mx-auto text-slate-300">
           Find your{" "}
           <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text font-semibold">
@@ -19,9 +19,9 @@ export default function PresentationVideo() {
           Shop now <ArrowDown className="text-default-500" />
         </Button>
       </div>
-      <div className="top-0 absolute w-full">
+      <div className="top-0 relative h-screen w-full">
         <video
-          className="w-full h-screen object-cover opacity-10" 
+          className="w-full h-screen object-cover opacity-10 absolute" 
           disableRemotePlayback
           preload="metadata"
           loop
