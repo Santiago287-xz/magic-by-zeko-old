@@ -1,6 +1,6 @@
-# Next.js & NextUI Template
+# Next.js E-Commerce
 
-This is a template for creating applications using Next.js 13 (pages directory) and NextUI (v2).
+This is a project for Magic by zEko
 
 ## Technologies Used
 
@@ -14,11 +14,17 @@ This is a template for creating applications using Next.js 13 (pages directory) 
 
 ## How to Use
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
+To run de proyect you need to, run the following command:
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-pages-template
+pnpm i
 ```
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-pages-template/blob/main/LICENSE).
+```bash
+pnpm run dev
+```
+In case you dont have pnpm:
+```bash
+npm i
+```
+```bash
+npm run dev
+```

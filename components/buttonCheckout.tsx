@@ -32,7 +32,7 @@ function ButtonCheckout({ priceId }: { priceId: string }) {
       variant={error ? "shadow": "solid"}
       isDisabled={error}
     >
-      Buy
+      Checkout
     </Button>
   );
 }
