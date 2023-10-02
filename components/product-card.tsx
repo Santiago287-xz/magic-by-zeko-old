@@ -8,7 +8,7 @@ import { type Product } from "@/pages/types.d";
 export default function ProductCard({ data }: { data: Product }) {
   return (
     <>
-      <div key={data.id} className="m-4 p-4 rounded-2xl bg-foreground/5">
+      <div key={data.id} className="m-4 p-4 rounded-2xl bg-foreground/10">
         <div className="font-medium inline m-auto text-center">
           <p className="uppercase text-m tracking-[0.16em]">{data.name}</p>
           <h3 className="text-2xl font-normal">{data.metadata.product_tipe}</h3>
