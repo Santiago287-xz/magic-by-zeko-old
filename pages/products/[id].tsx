@@ -52,52 +52,62 @@ export default function Page({
   const custom_data_names =
     selected_product.metadata.custom_data_names.split(";");
   const custom_data = selected_product.metadata.custom_data.split(";");
+  // document.body.className = "bg-foreground/5";
   return (
     <>
       <Navbar />
-      <main className="absolute h-screen w-screen top-0">
-        <section className="flex justify-center items-center h-screen p-4 rounded-lg w-4/5 m-auto">
-          <article className="p-8 w-1/2">
-            <div className="text-center">
-              <span className="uppercase text-lg tracking-[0.16em]">
-                {selected_product.name}
-              </span>
-              <h3 className="text-1xl md:text-2xl lg:text-3xl font-normal">
-                {selected_product.metadata.product_tipe}
-              </h3>
-            </div>
+      <main className="relative ">
+        <section className="flex justify-center flex-wrap flex-col-reverse lg:flex-row md:flex-nowrap items-start p-4 rounded-lg w-auto md:w-4/5 m-auto">
+          <article className="p-8 w-[95%] lg:w-1/2 m-auto">
             <div>
               {custom_data_names.map((custom_data_name, i) => (
                 <div key={custom_data_name + i}>
-                  <h4>{custom_data_name}</h4>
-                  <p className="bg-foreground/5 rounded-md py-3 px-6">
+                  <h4 className="p-3 text-xl">{custom_data_name}</h4>
+                  <p className="bg-foreground/5 text-foreground-600 rounded-md py-3 px-6">
                     {custom_data[i]}
                   </p>
                 </div>
               ))}
             </div>
-            <ul className="list-disc pl-4 m-2">
+            <h4 className="pt-4 pl-4 text-lg">Others Products</h4>
+            <div className="flex gap-4 justify-evenly">
+              {others_products.map((product) => (
+                <div
+                  key={product.id}
+                  className="m-4 p-4 rounded-2xl dark:bg-foreground-50 bg-foreground-200"
+                >
+                  <Link
+                    className="relative mt-8 rounded-2xl w-[19rem]"
+                    href={"/products/" + product.id}
+                  >
+                    <b className="absolute z-10 w-max left-[50%] dark:bg-foreground-50 bg-foreground-200 text-foreground-700 p-1 px-4 rounded-3xl flex items-center translate-x-[-50%] translate-y-[-50%]">
+                      <span>{product.name}</span>
+                    </b>
+                    <Image
+                      alt={product.name}
+                      src={product.images[0]}
+                      className="z-0 h-4/5 object-cover hover:scale-[1.03] bg-foreground/10"
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <ul className="list-disc p-6 text-foreground-600">
               <li>Envíos express a todo el país</li>
               <li>Nos encontramos en CABA.</li>
-              <li> Emitimos factura A y B</li>
+              <li>Emitimos factura A y B</li>
+              <li>Garantia 6 Meses</li>
             </ul>
-            <footer className="flex gap-4 justify-center">
-              {others_products.map((product) => (
-                <Link
-                  key={product.id}
-                  className="relative bg-foreground/10 rounded-2xl w-auto"
-                  href={"/products/" + product.id}
-                >
-                  <Image
-                    alt={product.name}
-                    src={product.images[0]}
-                    className="z-0 h-[12rem] object-cover hover:scale-105"
-                  />
-                </Link>
-              ))}
-            </footer>
           </article>
-          <div className="rounded-lg">
+          <div className="rounded-lg mt-8 mx-auto">
+            <div className="text-center">
+              <span className="uppercase text-xl tracking-[0.16em] text-foreground-500">
+                {selected_product.name}
+              </span>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-normal">
+                {selected_product.metadata.product_tipe}
+              </h3>
+            </div>
             <div className="max-w-[38rem] rounded-lg w-auto m-auto">
               <Splide aria-label="Products">
                 {images.map((image_src, i) => (

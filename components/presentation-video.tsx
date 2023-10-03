@@ -4,14 +4,7 @@ import { ArrowDown } from "@/components/icons"
 export default function PresentationVideo() {
   return (
     <section className="h-screen bg-black top-[-4rem] relative">
-      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center">
-        <small className="uppercase mx-auto text-slate-300">
-          Find your{" "}
-          <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text font-semibold">
-            next
-          </span>{" "}
-          peripheral
-        </small>
+      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center">        
         <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-slate-50 text-center">
           Magic by Zeko
         </h1>
