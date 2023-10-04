@@ -8,12 +8,12 @@ import { type Product } from "@/pages/types.d";
 export default function ProductCard({ data }: { data: Product }) {
   return (
     <>
-      <div key={data.id} className="m-4 p-4 rounded-2xl bg-foreground/10">
+      <div key={data.id} className="m-4 p-4 w-full sm:w-auto rounded-2xl bg-foreground/10">
         <div className="font-medium inline m-auto text-center">
           <p className="uppercase text-m tracking-[0.16em]">{data.name}</p>
           <h3 className="text-2xl font-normal">{data.metadata.product_tipe}</h3>
         </div>
-        <Link className="relative mt-8 bg-foreground/10 rounded-2xl w-[19rem]" href={'/products/' + data.id}>
+        <Link className="relative mt-8 bg-foreground/10 rounded-2xl sm:w-[19rem] w-full" href={'/tienda/' + data.id}>
           <b className="absolute top-[-.5rem] left-[50%] bg-background text-foreground p-2 px-4 rounded-3xl flex items-center translate-x-[-50%] translate-y-[-50%]">
             <span>$</span>
             <span>{data.default_price.unit_amount/100}</span>

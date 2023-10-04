@@ -4,21 +4,11 @@ import { MailIcon } from "@/components/icons";
 
 export default function MailForm() {
   return (
-    <form className="flex gap-1 md:gap-12 lg:gap-48" onSubmit={()=>(alert("asdasd"))}>
-      <h2 className="grid place-items-center font-bold lg:text-4xl">
-        Completar el pago
+<form className="flex  items-center gap-1 md:gap-4 lg:gap-16 justify-center" onSubmit={()=>(alert("asdasd"))}>
+      <h2 className="grid place-items-center justify-center font-bold lg:text-2xl">
+      No te lo pierdas
       </h2>
       <section className="flex justify-center gap-2">
-        <Input
-          autoFocus
-          endContent={
-            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-          }
-          className="md:w-72 lg:"
-          label="Email"
-          placeholder="Enter your email"
-          variant="bordered"
-        />
         <Input
           autoFocus
           endContent={

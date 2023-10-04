@@ -9,12 +9,8 @@ export const siteConfig = {
 			href: "/",
 		},
     {
-      label: "Products",
-      href: "/#products",
-    },
-    {
-      label: "Contact",
-      href: "/contact",
+      label: "Tienda",
+      href: "/tienda",
     },
     {
       label: "Ayuda",

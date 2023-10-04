@@ -1,4 +1,3 @@
-
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Accordion, AccordionItem } from "@nextui-org/react";
