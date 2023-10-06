@@ -1,6 +1,14 @@
 import React from "react";
 
-import { Card, CardHeader, CardFooter, Image, Button, Link} from "@nextui-org/react";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  Image,
+  Button,
+  Link,
+  Divider,
+} from "@nextui-org/react";
 
 export default function GaleryPics() {
   const data = [
@@ -46,38 +54,47 @@ export default function GaleryPics() {
     },
   ];
   return (
-    <section className="max-w-[900px] w-4/5 gap-2 grid grid-cols-12 grid-rows-2 py-16 mx-auto justify-center">
-      {data.map((cart) => (
-        <Card key={cart.image} className={"col-span-12 h-[300px] " + cart.grid}>
-          <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-            <span className="text-tiny text-white/60 uppercase font-bold">
-              {cart.span}
-            </span>
-            <h4 className="text-white font-medium text-large">{cart.h4}</h4>
-          </CardHeader>
-          <Link href="/tienda" className="w-full h-full">
-            <Image
-              removeWrapper
-              alt="Card background"
-              className="z-0 w-full h-full object-cover hover:scale-105"
-              src={cart.image}
-            />
-          </Link>
-          {cart.fotter ? (
-            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-              <div className="flex flex-grow gap-2 items-center">
-                <div className="flex flex-col">
-                  <p className="text-tiny text-white/60">{cart.fotter[0]}</p>
-                  <p className="text-tiny text-white/60">{cart.fotter[1]}</p>
+    <section className="w-full bg-[#1C1D1F]">
+      <Divider />
+      <h2 className="w-full text-3xl md:text-4xl lg:text-6xl pt-12 mb-4 flex justify-center text-white">
+        Galeria
+      </h2>
+      <main className="max-w-[900px] w-4/5 gap-2 grid grid-cols-12 grid-rows-2 py-16 mx-auto justify-center">
+        {data.map((cart) => (
+          <Card
+            key={cart.image}
+            className={"col-span-12 h-[300px] " + cart.grid}
+          >
+            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+              <span className="text-tiny text-white/60 uppercase font-bold">
+                {cart.span}
+              </span>
+              <h4 className="text-white font-medium text-large">{cart.h4}</h4>
+            </CardHeader>
+            <Link href="/tienda" className="w-full h-full">
+              <Image
+                removeWrapper
+                alt="Card background"
+                className="z-0 w-full h-full object-cover hover:scale-105"
+                src={cart.image}
+              />
+            </Link>
+            {cart.fotter ? (
+              <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                <div className="flex flex-grow gap-2 items-center">
+                  <div className="flex flex-col">
+                    <p className="text-tiny text-white/60">{cart.fotter[0]}</p>
+                    <p className="text-tiny text-white/60">{cart.fotter[1]}</p>
+                  </div>
                 </div>
-              </div>
-              <Button radius="full" size="sm">
-                {cart.fotter[2]}
-              </Button>
-            </CardFooter>
-          ) : null}
-        </Card>
-      ))}
+                <Button radius="full" size="sm">
+                  {cart.fotter[2]}
+                </Button>
+              </CardFooter>
+            ) : null}
+          </Card>
+        ))}
+      </main>
     </section>
   );
 }

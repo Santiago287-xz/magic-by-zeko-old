@@ -2,6 +2,8 @@ import ProductCartSplide from "@/components/product-card-splide";
 
 import Link from "next/link";
 import { type Product } from "@/pages/types.d";
+import MailForm from "@/components/mail-form";
+
 
 import { Image, Divider } from "@nextui-org/react";
 

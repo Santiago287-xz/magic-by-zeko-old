@@ -18,7 +18,7 @@ export default function DefaultLayout({
         <Navbar />
         <div>
           <PresentationVideo />
-          <main className="container mx-auto max-w-7xl px-6 flex-grow" id="products">
+          <main className="container mx-auto flex-grow" id="products">
             {children}
           </main>
         </div>

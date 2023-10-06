@@ -4,12 +4,12 @@ import { ArrowDown } from "@/components/icons"
 export default function PresentationVideo() {
   return (
     <section className="h-screen bg-black top-[-4rem] relative">
-      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center">        
+      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center  animate-fade-up">        
         <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-slate-50 text-center">
           Magic by Zeko
         </h1>
         <Button href="#products" as={Link} color="primary" variant="ghost" className="mx-auto mt-4 z-10">
-          Shop now <ArrowDown className="text-default-500" />
+          Ver productos <ArrowDown className="text-default-500" />
         </Button>
       </div>
       <div className="top-0 relative h-screen w-full">

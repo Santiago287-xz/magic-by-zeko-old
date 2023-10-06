@@ -15,8 +15,7 @@ export default function Footer() {
   const logoURL = theme === "light" ? lightLogoURL : darkLogoURL;
   return (
     <>
-      <Divider />
-      <footer className="w-full flex items-center justify-center flex-col pb-3 pt-6 gap-5">
+      <footer className="w-full flex items-center justify-center flex-col pb-3 pt-6 gap-5 bg-gray-800">
         <main className="w-4/5 md:w-1/3 lg:w-1/2">
           <section className="flex justify-evenly gap-48">
             <article className="flex flex-col gap-2">

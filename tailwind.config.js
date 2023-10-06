@@ -18,5 +18,5 @@ module.exports = {
   darkMode: "class",
   plugins: [nextui({
     defaultTheme: "light"
-  })],
+  }), require('tailwindcss-animated')],
 }

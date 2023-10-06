@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import ProductAllData from "@/components/product-all-data";
 import IconsSection from "@/components/icons-section";
 import SizeSection from "@/components/size-section";
+import VideoSection from "@/components/video-section";
 import { Divider } from "@nextui-org/react";
 import { type Product } from "@/pages/types.d";
 
@@ -50,7 +51,10 @@ export default function Page({
         />
         <Divider />
         <IconsSection />
+        <Divider />
         <SizeSection image={selected_product.metadata.image_3} />
+        <Divider />
+        <VideoSection/>
       </main>
       <Footer />
     </>
