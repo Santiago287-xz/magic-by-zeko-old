@@ -40,7 +40,7 @@ export default function GaleryPics() {
       span: "What to watch",
       h4: "Stream the Acme event",
       grid: "sm:col-span-5",
-      fotter: ["Available soon.", "Get notified.", "Comprar"],
+      fotter: null,
       image:
         "https://media.discordapp.net/attachments/1019381524149305426/1158943348384612412/342364813_1227742087880024_791470389807022684_n.png?ex=651e159a&is=651cc41a&hm=4d4c665b616c5d8af79bc40cd4918e45f8e0a8e4bdabf5ba7a6340b83340979e&=&width=476&height=473",
     },
@@ -48,13 +48,13 @@ export default function GaleryPics() {
       span: "What to watch",
       h4: "Stream the Acme event",
       grid: "sm:col-span-7",
-      fotter: ["Breathing App", "Get a good night's sleep.", "Ver Producto"],
+      fotter: null,
       image:
-        "https://media.discordapp.net/attachments/1019381524149305426/1158943348661428254/385240292_1279108019421964_6829392139607667254_n.png?ex=651e159a&is=651cc41a&hm=b7fd1dc41ea95015f5e01316e8cfdb472b05b625fd5476b75498a90a3c4e3902&=&width=473&height=473",
+        "https://media.discordapp.net/attachments/1019381524149305426/1160271244692836352/Fotodesk.png?ex=65340dcd&is=652198cd&hm=d93141a9ab91e1a39631e8c9249e02697f192e7602a450eb6987e136e1f5c928&=&width=841&height=473",
     },
   ];
   return (
-    <section className="w-full bg-[#0b0b0b]">
+    <section className="w-full bg-[#2b2b2b] dark:bg-[#0b0b0b]">
       <Divider />
       <div className="w-11/12 m-auto">
           <div className="flex flex-col w-4/5 m-auto">
@@ -62,7 +62,7 @@ export default function GaleryPics() {
               Galeria
             </h2>
             <p className="md:text-lg lg:text-xl text-zinc-400 hidden sm:flex flex-col pb-8">
-            Experiencia gaming óptima, descubre nuestros:{" "}
+            Experiencia gaming óptima, descubre nuestros:
               <span className="font-medium text-zinc-200">
                 Mouse Pads de calidad
               </span>

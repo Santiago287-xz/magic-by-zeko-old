@@ -1,20 +1,29 @@
 import { Button, Link } from "@nextui-org/react";
-import { ArrowDown } from "@/components/icons"
+import { Cart } from "@/components/icons";
 
 export default function PresentationVideo() {
   return (
     <section className="h-screen bg-black top-[-4rem] relative">
-      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center  animate-fade-up">        
-        <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-slate-50 text-center">
+      <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center animate-fade-up z-10">
+        <p className="uppercase text-center text-zinc-300 tracking-[0.16em]">Federico Cristalino</p>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl text-slate-50 text-center tracking-wide">
           Magic by Zeko
         </h1>
-        <Button href="#products" as={Link} color="primary" variant="ghost" className="mx-auto mt-4 z-10">
-          Ver productos <ArrowDown className="text-default-500" />
+        <Button
+          href="/tienda/prod_OgaEMmLdWZvxde"
+          as={Link}
+          color="primary"
+          variant="ghost"
+          className="mx-auto mt-4 z-10"
+        >
+        Ver Productos
+        <Cart className="text-primary"
+        />
         </Button>
       </div>
-      <div className="top-0 relative h-screen w-full">
+      <div className="top-0 relative h-screen w-full z-1">
         <video
-          className="w-full h-screen object-cover opacity-10 absolute" 
+          className="w-full h-screen object-cover opacity-10 absolute"
           disableRemotePlayback
           preload="metadata"
           loop

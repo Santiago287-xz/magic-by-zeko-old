@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProductAllData from "@/components/product-all-data";
 import IconsSection from "@/components/icons-section";
+import TiposSection from "@/components/tipos-section";
 import SizeSection from "@/components/size-section";
 import VideoSection from "@/components/video-section";
 import { Divider } from "@nextui-org/react";
@@ -34,6 +35,10 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
   return { props: { selected_product, others_products } };
 }
+
+import { Outfit } from "next/font/google";
+const outfit = Outfit({ subsets: ["latin"] });
+
 export default function Page({
   selected_product,
   others_products,
@@ -44,7 +49,7 @@ export default function Page({
   return (
     <>
       <Navbar />
-      <main className="relative ">
+      <main className={outfit.className + " relative"}>
         <ProductAllData
           selected_product={selected_product}
           others_products={others_products}
@@ -54,6 +59,7 @@ export default function Page({
         <Divider />
         <SizeSection image={selected_product.metadata.image_3} />
         <Divider />
+        <TiposSection/>
         <VideoSection/>
       </main>
       <Footer />

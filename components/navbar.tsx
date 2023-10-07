@@ -13,19 +13,24 @@ import {
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import { useTheme } from "next-themes";
-
+import React, { useEffect, useState } from "react";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { TwitterIcon, InstagramIcon } from "@/components/icons";
 
-export const Navbar = () => {
-  const lightLogoURL =
-    "https://media.discordapp.net/attachments/1116888339967119460/1157748996434051173/image1.png?ex=6519bd46&is=65186bc6&hm=86275a0c1f15eea403bb28ba672d1d4e9c10fcaa1c53b1ee170aea990ff451c1&=&width=340&height=472";
-  const darkLogoURL =
-    "https://media.discordapp.net/attachments/1116888339967119460/1157748996069142618/image.png?ex=6519bd46&is=65186bc6&hm=d26b0960292e3c8675c97108275e1580d50cb79fb9ad036a88c4e28c5d260940&=&width=354&height=473";
+const lightLogoURL =
+  "https://media.discordapp.net/attachments/1116888339967119460/1157748996434051173/image1.png?ex=6519bd46&is=65186bc6&hm=86275a0c1f15eea403bb28ba672d1d4e9c10fcaa1c53b1ee170aea990ff451c1&=&width=340&height=472";
+const darkLogoURL =
+  "https://media.discordapp.net/attachments/1116888339967119460/1157748996069142618/image.png?ex=6519bd46&is=65186bc6&hm=d26b0960292e3c8675c97108275e1580d50cb79fb9ad036a88c4e28c5d260940&=&width=354&height=473";
 
+export const Navbar = () => {
+  const [imageUrl, setImageUrl] = useState('');
   const { theme } = useTheme();
-  const imageUrl = theme === "light" ? lightLogoURL : darkLogoURL;
-  console.log(theme);
+
+  useEffect(() => {
+    const imageUrl = theme === "light" ? lightLogoURL : darkLogoURL;
+    setImageUrl(imageUrl)
+  }, [theme]);
+
   return (
     <>
       <NextUINavbar

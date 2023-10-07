@@ -2,9 +2,6 @@ import ProductCartSplide from "@/components/product-card-splide";
 
 import Link from "next/link";
 import { type Product } from "@/pages/types.d";
-import MailForm from "@/components/mail-form";
-
-
 import { Image, Divider } from "@nextui-org/react";
 
 export default function ProductAllData({
@@ -19,9 +16,9 @@ export default function ProductAllData({
   const custom_data = selected_product.metadata.custom_data.split(";");
 
   return (
-    <section className="flex justify-center flex-wrap flex-col-reverse lg:flex-row md:flex-nowrap items-start p-4 rounded-lg w-full xl:w-4/5 m-auto">
+    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-start p-4 rounded-lg w-full xl:w-4/5 m-auto">
       <ProductCartSplide selected_product={selected_product} />
-      <article className="p-8 w-[95%] lg:w-1/2 m-auto">
+      <article className="p-8 w-[95%] lg:w-2/5 m-auto">
         <div>
           {custom_data_names.map((custom_data_name, i) => (
             <div key={custom_data_name + i}>
@@ -32,8 +29,9 @@ export default function ProductAllData({
             </div>
           ))}
         </div>
-        <Divider />
-        <h4 className="pt-4 text-center font-medium text-lg">Seleccionar Color</h4>
+        <h4 className="pt-4 text-center font-medium text-lg">
+          Seleccionar Color
+        </h4>
         <div className="flex flex-col gap-4 justify-center items-center sm:flex-row sm:gap-4 sm:justify-evenly">
           {others_products.map((product) => (
             <div

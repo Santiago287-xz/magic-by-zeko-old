@@ -1,20 +1,18 @@
-import { Input, Divider, Spinner, Checkbox, Button } from "@nextui-org/react";
-import { MailIcon } from "@/components/icons";
+import { Input, Spinner, Button } from "@nextui-org/react";
 import { CheckIcon } from "@/components/icons";
 
 import React, { useState } from "react";
 
 export default function MailForm() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleButtonClick = (e) => {
     e.preventDefault();
 
-    if (email.includes('@')) {
+    if (email.includes("@")) {
       setIsLoading(true);
-
       setTimeout(() => {
         setIsLoading(false);
         setIsSuccess(true);
@@ -26,25 +24,28 @@ export default function MailForm() {
 
   return (
     <form
-      className="flex items-center gap-1 md:gap-4 lg:gap-16 justify-center py-16 bg-white dark:bg-transparent"
+      className="flex flex-col items-center gap-4 md:gap-8 justify-center py-16 bg-white dark:bg-transparent p-4"
+      onSubmit={handleButtonClick}
     >
-      <h2 className="grid place-items-center justify-center font-bold lg:text-2xl">
+      <h2 className="text-3xl tracking-wide text-center mb-4">
         No te lo pierdas
       </h2>
-      <section className="flex justify-center gap-2">
+      <section className="flex justify-center gap-2 w-full sm:w-4/5 lg:w-auto">
         <Input
           autoFocus
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="md:w-72"
+          className="w-full md:w-[24rem]"
           label="Email"
           placeholder="Enter your email"
         />
         <Button
-            className={`h-auto px-8 bg-transparent hover:bg-foreground-100 border-2 transition ${isLoading ? 'cursor-not-allowed' : ''}`}
-            disabled={isLoading}
-            onClick={handleButtonClick}
-          >
+          className={`w-full md:w-1/2 h-auto px-8 bg-transparent hover:bg-foreground-100 border-2 transition ${
+            isLoading ? "cursor-not-allowed" : ""
+          }`}
+          disabled={isLoading}
+          onClick={handleButtonClick}
+        >
           {isLoading ? (
             <div className="flex items-center gap-2">
               <Spinner className="animate-spin text-default-400" />
@@ -56,7 +57,7 @@ export default function MailForm() {
               ¡Suscrito!
             </div>
           ) : (
-            'Subscribe'
+            "Subscribe"
           )}
         </Button>
       </section>

@@ -7,10 +7,11 @@ export default function Page() {
     <>
       <Navbar />
       <main className="relative ">
-        <section className="flex flex-wrap justify-center p-4 rounded-lg w-auto md:w-4/5 m-auto">
-          <h1 className="font-bold text-xl md:text-2xl lg:text-5xl text-center p-6 md:p-24">
-            ¿EN QUE PODEMOS AYUDARTE?
-          </h1>
+        <section className="flex flex-wrap flex-col justify-center p-4 rounded-lg w-auto md:w-4/5 m-auto">
+        <p className="uppercase text-center tracking-[0.16em] text-foreground-700">FAQS</p>
+        <h1 className="text-lg md:text-xl lg:text-5xl text-center tracking-wide text-foreground-800">
+        ¿En que te podemos ayudar?
+        </h1>
           <Accordion>
             <AccordionItem
               key="1"

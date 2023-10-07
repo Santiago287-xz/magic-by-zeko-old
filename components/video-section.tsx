@@ -26,7 +26,7 @@ function VideoComponent() {
   }, [isVideoVisible]);
 
   return (
-    <section>
+    <section className="hidden md:block">
       <video
         ref={videoRef}
         className="w-full h-screen object-cover"
