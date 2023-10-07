@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 function VideoComponent() {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   useEffect(() => {
@@ -19,11 +19,7 @@ function VideoComponent() {
         }
       }
     };
-
-    // Agregar un event listener para el evento de scroll
     window.addEventListener("scroll", handleScroll);
-
-    // Limpieza: eliminar el event listener cuando el componente se desmonta
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

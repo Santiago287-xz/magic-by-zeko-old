@@ -54,12 +54,22 @@ export default function GaleryPics() {
     },
   ];
   return (
-    <section className="w-full bg-[#1C1D1F]">
+    <section className="w-full bg-[#0b0b0b]">
       <Divider />
-      <h2 className="w-full text-3xl md:text-4xl lg:text-6xl pt-12 mb-4 flex justify-center text-white">
-        Galeria
-      </h2>
-      <main className="max-w-[900px] w-4/5 gap-2 grid grid-cols-12 grid-rows-2 py-16 mx-auto justify-center">
+      <div className="w-11/12 m-auto">
+          <div className="flex flex-col w-4/5 m-auto">
+            <h2 className="w-full text-center sm:text-start text-4xl md:text-3xl lg:text-5xl py-8 sm:pb-2 text-zinc-200">
+              Galeria
+            </h2>
+            <p className="md:text-lg lg:text-xl text-zinc-400 hidden sm:flex flex-col pb-8">
+            Experiencia gaming óptima, descubre nuestros:{" "}
+              <span className="font-medium text-zinc-200">
+                Mouse Pads de calidad
+              </span>
+            </p>
+          </div>
+        </div>
+      <main className="max-w-[900px] w-4/5 gap-2 grid grid-cols-12 grid-rows-2 pb-16 mx-auto justify-center">
         {data.map((cart) => (
           <Card
             key={cart.image}

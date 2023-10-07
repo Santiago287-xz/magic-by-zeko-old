@@ -13,7 +13,7 @@ export default function DefaultLayout({
 }) {  
   return (
     <div className={inter.className}>
-      <div className="relative flex flex-col h-screen">
+      <div className="relative flex flex-col">
         <Head />
         <Navbar />
         <div>

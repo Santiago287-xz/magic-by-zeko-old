@@ -1,62 +1,40 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Magic by Zeko",
-	description: "Make beautiful websites regardless of your design experience.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+  name: "Magic by Zeko",
+  description: "Make beautiful websites regardless of your design experience.",
+  navItems: [
+    {
+      label: "Home",
+      href: "/",
+    },
     {
       label: "Tienda",
-      href: "/tienda",
+      href: "/tienda/prod_OgaEMmLdWZvxde",
     },
     {
       label: "Ayuda",
       href: "/ayuda",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
-	links: {
-		twitter: "https://twitter.com/getnextui",
-		instagram: "https://twitter.com/getnextui",
-		discord: "https://discord.gg/9b6yyZKmH4",
-		sponsor: "https://patreon.com/jrgarciadev",
-	  },
+    },
+  ],
+  navMenuItems: [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Tienda",
+      href: "/tienda/prod_OgaEMmLdWZvxde",
+    },
+    {
+      label: "Ayuda",
+      href: "/ayuda",
+    },
+  ],
+  links: {
+    twitter: "https://twitter.com/MagicByZeko",
+    instagram: "https://www.instagram.com/magicbyzeko/"
+  },
 };
 
 //   links: {

@@ -8,7 +8,7 @@ export default function Page() {
       <Navbar />
       <main className="relative ">
         <section className="flex flex-wrap justify-center p-4 rounded-lg w-auto md:w-4/5 m-auto">
-          <h1 className="font-bold text-xl md:text-2xl lg:text-5xl text-center p-4">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-5xl text-center p-6 md:p-24">
             ¿EN QUE PODEMOS AYUDARTE?
           </h1>
           <Accordion>

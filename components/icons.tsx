@@ -38,7 +38,7 @@ l-998 -997 -998 997 c-652 651 -1011 1003 -1037 1016 -76 37 -170 49 -248 31z"
   );
 };
 
-export const HomeIcon: React.FC<IconSvgProps> = ({
+export const HeartIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,
@@ -53,12 +53,13 @@ export const HomeIcon: React.FC<IconSvgProps> = ({
       {...props}
     >
       <path
-        d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"
-        fill="currentColor"
-      ></path>
+        d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
+        fill='currentColor'
+      />
     </svg>
   );
 };
+
 export const MarkerIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -154,6 +155,50 @@ export const PadIcon: React.FC<IconSvgProps> = ({
     </svg>
   );
 };
+
+export const CheckIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width = 16,
+  height = 16,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 25 25"
+      width={size || width}
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="m9 19.414l-6.707-6.707l1.414-1.414L9 16.586L20.293 5.293l1.414 1.414z"
+      />
+    </svg>
+  );
+};
+
+
+// export const CheckIcon: React.FC<IconSvgProps> = ({
+//   size = 24,
+//   width = 100,
+//   height = 100,
+//   ...props
+// }) => {
+//   return (
+//     <svg
+//       height={size || height}
+//       viewBox="0 0 100 100"
+//       width={size || width}
+//       {...props}
+//     >
+//         <path
+//           d="m9 19.414l-6.707-6.707l1.414-1.414L9 16.586L20.293 5.293l1.414 1.414z"
+//           fill="currentColor"
+//         />
+//     </svg>
+//   );
+// };
+
 
 export const PadCheckIcon: React.FC<IconSvgProps> = ({
   size = 48,
