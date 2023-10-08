@@ -11,24 +11,23 @@ export default function ProductAllData({
   selected_product: Product;
   others_products: Array<Product>;
 }) {
-  const custom_data_names =
-    selected_product.metadata.custom_data_names.split(";");
-  const custom_data = selected_product.metadata.custom_data.split(";");
-
   return (
-    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-start p-4 rounded-lg w-full xl:w-4/5 m-auto">
+    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-center p-16 pt-0 rounded-lg w-full xl:w-4/5 m-auto">
       <ProductCartSplide selected_product={selected_product} />
-      <article className="p-8 w-[95%] lg:w-2/5 m-auto">
-        <div>
-          {custom_data_names.map((custom_data_name, i) => (
-            <div key={custom_data_name + i}>
-              <h4 className="p-3 text-xl">{custom_data_name}</h4>
-              <p className="bg-foreground/5 text-foreground-600 rounded-md py-3 px-6">
-                {custom_data[i]}
-              </p>
-            </div>
-          ))}
+      <article className="p-8 w-[95%] lg:w-2/5">
+        <div className="text-center">
+          <span className="uppercase text-3xl tracking-[0.16em] text-foreground-600">
+            {selected_product.name}
+          </span>
+          <h3 className="text-2xl md:text-4xl lg:text-5xl font-normal">
+            {selected_product.metadata.product_tipe}
+          </h3>
+          <p className="py-12">
+            The Pwnage Precision Pad is a hybrid control gaming mouse pad made
+            for easy micro-adjustments and precise tracking.
+          </p>
         </div>
+        <Divider />
         <h4 className="pt-4 text-center font-medium text-lg">
           Seleccionar Color
         </h4>
@@ -45,7 +44,7 @@ export default function ProductAllData({
                   className="z-0 h-4/5 object-cover"
                 />
                 <b className="absolute w-max z-10 bottom-0 left-1/2 -translate-x-1/2 text-foreground-700 p-1 px-4 rounded-3xl flex items-center sm:text-base text-sm">
-                  <span>{product.name}</span>
+                  <span>{(product.name).split(' ')[1]}</span>
                 </b>
               </Link>
             </div>

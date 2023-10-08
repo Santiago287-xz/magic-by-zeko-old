@@ -14,10 +14,10 @@ export default function PresentationVideo() {
           as={Link}
           color="primary"
           variant="ghost"
-          className="mx-auto mt-4 z-10"
+          className="mx-auto mt-4 z-10 text-primary"
         >
         Ver Productos
-        <Cart className="text-primary"
+        <Cart
         />
         </Button>
       </div>

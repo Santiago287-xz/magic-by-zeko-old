@@ -14,20 +14,12 @@ export default function ProductCard({
   selected_product: Product;
 }) {
   const images = [
-    selected_product.images[0],
     selected_product.metadata.image_1,
     selected_product.metadata.image_2,
+    selected_product.images[0],
   ];
   return (
     <div className="rounded-lg mt-8 mx-auto">
-      <div className="text-center">
-        <span className="uppercase text-xl tracking-[0.16em] text-foreground-500">
-          {selected_product.name}
-        </span>
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-normal">
-          {selected_product.metadata.product_tipe}
-        </h3>
-      </div>
       <div className="max-w-[38rem] rounded-lg w-auto m-auto">
         <Splide aria-label="Products">
           {images.map((image_src, i) => (
@@ -36,7 +28,7 @@ export default function ProductCard({
                 removeWrapper
                 alt={selected_product.name}
                 src={image_src}
-                className="z-0 object-cover w-auto h-[25rem]"
+                className="z-0 object-cover w-auto max-h-[28rem]"
               />
             </SplideSlide>
           ))}
