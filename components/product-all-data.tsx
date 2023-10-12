@@ -12,9 +12,9 @@ export default function ProductAllData({
   others_products: Array<Product>;
 }) {
   return (
-    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-center p-16 pt-0 rounded-lg w-full xl:w-4/5 m-auto">
+    <section className="flex justify-center flex-wrap flex-col lg:flex-row md:flex-nowrap items-center md:p-16 md:pt-0 rounded-lg w-full xl:w-4/5 m-auto">
       <ProductCartSplide selected_product={selected_product} />
-      <article className="p-8 w-[95%] lg:w-2/5">
+      <article className="sm:p-8 w-auto lg:w-2/5">
         <div className="text-center">
           <span className="uppercase text-3xl tracking-[0.16em] text-foreground-600">
             {selected_product.name}

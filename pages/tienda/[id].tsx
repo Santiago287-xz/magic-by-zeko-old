@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProductAllData from "@/components/product-all-data";
 import IconsSection from "@/components/icons-section";
-import TiposSection from "@/components/tipos-section";
+import TiposSection from "@/components/types-section";
 import SizeSection from "@/components/size-section";
 import VideoSection from "@/components/video-section";
 import { Divider } from "@nextui-org/react";

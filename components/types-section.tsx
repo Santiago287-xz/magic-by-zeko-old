@@ -12,10 +12,10 @@ export default function TiposSection() {
           <p className="mt-4 text-2xl font-bold text-slate-200">Control</p>
           <p className="mt-2 text-slate-400">
             Obtén un{" "}
-            <span className="font-bold text-blue-400">control preciso</span> al
+            <span className="font-bold text-blue-400 inline-block w-max">control preciso</span> al
             mover tu mouse sobre la superficie de este mouse pad. Es altamente
             recomendado para juegos estratégicos como{" "}
-            <span className="font-bold text-blue-400">CSGO y Valorant</span>
+            <span className="font-bold text-blue-400 inline-block w-max">CSGO y Valorant</span>
             (Sin revestimiento).
           </p>
         </li>
@@ -29,10 +29,10 @@ export default function TiposSection() {
           <p className="mt-4 text-2xl font-bold text-slate-200">Speed</p>
           <p className="mt-2 text-slate-400">
             Experimenta una{" "}
-            <span className="font-bold text-orange-400">mayor velocidad</span>{" "}
+            <span className="font-bold text-orange-400 inline-block w-max">mayor velocidad</span>{" "}
             al mover tu mouse sobre la superficie de este mouse pad. Ideal para
             juegos de alta acción como{" "}
-            <span className="font-bold text-orange-400">Fortnite</span> (Sin
+            <span className="font-bold text-orange-400 inline-block w-max">Fortnite</span> (Sin
             revestimiento).
           </p>
         </li>

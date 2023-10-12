@@ -4,7 +4,7 @@ import "@splidejs/react-splide/css/skyblue";
 import "@splidejs/react-splide/css/core";
 
 import { Image } from "@nextui-org/react";
-import ButtonCheckout from "@/components/buttonCheckout";
+import ButtonCheckout from "@/components/button-checkout";
 
 import { type Product } from "@/pages/types.d";
 

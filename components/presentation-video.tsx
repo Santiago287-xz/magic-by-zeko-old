@@ -5,7 +5,9 @@ export default function PresentationVideo() {
   return (
     <section className="h-screen bg-black top-[-4rem] relative">
       <div className="flex flex-wrap flex-col h-full w-full absolute content-center justify-center animate-fade-up z-10">
-        <p className="uppercase text-center text-zinc-300 tracking-[0.16em]">Federico Cristalino</p>
+        <p className="uppercase text-center text-zinc-300 tracking-[0.16em]">
+          Federico Cristalino
+        </p>
         <h1 className="text-4xl md:text-6xl lg:text-8xl text-slate-50 text-center tracking-wide">
           Magic by Zeko
         </h1>
@@ -16,9 +18,8 @@ export default function PresentationVideo() {
           variant="ghost"
           className="mx-auto mt-4 z-10 text-primary"
         >
-        Ver Productos
-        <Cart
-        />
+          Ver Productos
+          <Cart />
         </Button>
       </div>
       <div className="top-0 relative h-screen w-full z-1">

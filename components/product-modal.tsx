@@ -8,7 +8,7 @@ import {
   useDisclosure,
   Image,
 } from "@nextui-org/react";
-import ButtonCheckout from "./buttonCheckout";
+import ButtonCheckout from "./button-checkout";
 import { type Product } from "@/pages/types.d";
 
 export default function ProductModal({

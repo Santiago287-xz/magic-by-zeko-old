@@ -1,14 +1,14 @@
 import { Input, Spinner, Button } from "@nextui-org/react";
 import { CheckIcon } from "@/components/icons";
 
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 
 export default function MailForm() {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleButtonClick = (e) => {
+  const handleButtonClick = (e: FormEvent) => {
     e.preventDefault();
 
     if (email.includes("@")) {
@@ -25,7 +25,7 @@ export default function MailForm() {
   return (
     <form
       className="flex flex-col items-center gap-4 md:gap-8 justify-center py-16 bg-white dark:bg-transparent p-4"
-      onSubmit={handleButtonClick}
+      onSubmit={(e)=>handleButtonClick(e)}
     >
       <h2 className="text-3xl tracking-wide text-center mb-4">
         No te lo pierdas
