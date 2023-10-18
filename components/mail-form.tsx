@@ -1,6 +1,6 @@
 import { Input, Spinner, Button } from "@nextui-org/react";
 import { CheckIcon } from "@/components/icons";
-
+import { EmailTemplate } from '@/components/email-template';
 import React, { useState, FormEvent } from "react";
 
 export default function MailForm() {
@@ -21,11 +21,10 @@ export default function MailForm() {
       alert('El correo electrónico debe contener al menos un "@".');
     }
   };
-
   return (
     <form
       className="flex flex-col items-center gap-4 md:gap-8 justify-center py-16 bg-white dark:bg-transparent p-4"
-      onSubmit={(e)=>handleButtonClick(e)}
+      onSubmit={(e) => handleButtonClick(e)}
     >
       <h2 className="text-3xl tracking-wide text-center mb-4">
         No te lo pierdas

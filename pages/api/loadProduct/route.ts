@@ -14,7 +14,6 @@ export async function loadProduct(productId: any) {
 }
 
 export async function loadFullData() {
-  // const products = (await stripe.products.list()).data;
   const products = (
     await stripe.products.search({
       query: "active:'true'",
